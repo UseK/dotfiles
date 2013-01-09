@@ -19,8 +19,8 @@ filetype indent off
 set clipboard=unnamed,autoselect
 
 if has('vim_starting')
-	set runtimepath+=~/.vim/neobundle.vim.git
-	call neobundle#rc(expand('~/.bundle'))
+	set runtimepath+=~/.vim/.bundle/neobundle.vim
+	call neobundle#rc(expand('~/.vim/.bundle'))
 endif
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'
