@@ -29,8 +29,8 @@ if has('gui_macvim')
 	set nowrapscan       " 検索をファイルの先頭へループしない
 
 	" フォント設定
-	set guifontwide=Osaka:h12
-	set guifont=Osaka-Mono:h14
+	set guifontwide=Menlo\ Regular:h12
+	set guifont=Menlo\ Regular:h12
 
 	"全角スペースを視覚化
 	highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=#666666
