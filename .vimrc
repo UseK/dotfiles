@@ -1,4 +1,3 @@
-"色分け
 syntax on
 "行末、行頭でカーソルが止まらない
 set whichwrap=b,s,h,l,<,>,[,]
@@ -10,22 +9,54 @@ set backspace=eol,start,indent
 set tabstop=2
 set shiftwidth=2
 set autoindent
+"タブボタンでスペースを入力
+set expandtab
 "viとの互換をoffに
 set nocompatible
-"vim-rubyのための設定
-filetype on
-filetype indent on
+filetype plugin off
+filetype indent off
+"クリップボードにコピーする
+set clipboard=unnamed,autoselect
+
+if has('vim_starting')
+	set runtimepath+=~/.vim/neobundle.vim.git
+	call neobundle#rc(expand('~/.bundle'))
+endif
+"NeoBundle 'git://github.com/Shougo/clang_complete.git'
+"NeoBundle 'git://github.com/Shougo/echodoc.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+NeoBundle 'taichouchou2/vim-rsense'
+let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
+"let g:rsenseUseOmniFunc = 1
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/Shougo/vimproc.git'
+
+"NeoBundle 'git://github.com/Shougo/vim-vcs.git'
+NeoBundle 'git://github.com/Shougo/vimfiler.git'
+"NeoBundle 'git://github.com/Shougo/vimshell.git'
+"NeoBundle 'git://github.com/Shougo/vinarise.git'
+
+NeoBundle 'thinca/vim-quickrun.git'
+let g:quickrun_config = {}
+let g:quickrun_config._ = {'runner' : 'vimproc'}
+NeoBundle 'endwise.vim'
+NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+let g:user_zen_settings = { 'indentation':'  ' }
+"NeoBundle 'Smooth-Scroll'
+"let g:scroll_factor = 5000
+"NeoBundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+"let g:indent_guides_auto_colors = 0
+"hi IndentGuidesOdd  guibg=red   ctermbg=3
+"hi IndentGuidesEven guibg=green ctermbg=4
+NeoBundle 'git://github.com/tpope/vim-rails.git'
+NeoBundle 'git://github.com/reinh/vim-rubytest.git'
 filetype plugin on
-"無駄なスペース１個分を見つけてハイライト
-let ruby_space_errors=1
+filetype indent on
 "行番号をつける
 set number
-"ほかのタブへコピペするプラグイン"
-"map sy :call YanktmpYank()<CR>
-"map sp :call YanktmpPaste_p()<CR>
-"map sP :call YanktmpPaste_P()<CR>
+"無駄なスペース１個分を見つけてハイライト
+let ruby_space_errors=1
 set clipboard=unnamed,autoselect
-"vundle用
-set rtp+=~/.vim/vundle.git/ 
-call vundle#rc()
-Bundle 'neocomplcache'
+
+let g:vimfiler_as_default_explorer = 1
