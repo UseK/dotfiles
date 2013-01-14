@@ -51,6 +51,8 @@ let g:user_zen_settings = { 'indentation':'  ' }
 "hi IndentGuidesEven guibg=green ctermbg=4
 NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/reinh/vim-rubytest.git'
+NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'dbext.vim'
 filetype plugin on
 filetype indent on
 "行番号をつける
