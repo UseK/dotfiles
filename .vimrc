@@ -53,6 +53,7 @@ NeoBundle 'git://github.com/tpope/vim-rails.git'
 NeoBundle 'git://github.com/reinh/vim-rubytest.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'dbext.vim'
+NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 filetype plugin on
 filetype indent on
 "行番号をつける
