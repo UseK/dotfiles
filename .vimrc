@@ -60,6 +60,12 @@ filetype indent on
 set number
 "無駄なスペース１個分を見つけてハイライト
 let ruby_space_errors=1
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+"ヤンクの内容をクリップボードにコピー
 set clipboard=unnamed,autoselect
 
 let g:vimfiler_as_default_explorer = 1
