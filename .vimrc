@@ -40,6 +40,13 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 NeoBundle 'thinca/vim-quickrun.git'
 let g:quickrun_config = {}
 let g:quickrun_config._ = {'runner' : 'vimproc'}
+let g:quickrun_config.markdown = {
+  \ 'outputter' : 'null',
+  \ 'command' : 'open',
+  \ 'cmdopt' : '-a',
+  \ 'args' : 'Marked',
+  \ 'exec' : '%c %o %a %s',
+  \ }
 NeoBundle 'endwise.vim'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 let g:user_zen_settings = { 'indentation':'  ' }
