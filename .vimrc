@@ -13,13 +13,26 @@ set autoindent
 set expandtab
 "viとの互換をoffに
 set nocompatible
+"ヤンクの内容をクリップボードにコピー
+set clipboard=unnamed,autoselect
+"行番号をつける
+set number
+"無駄なスペース１個分を見つけてハイライト
+let ruby_space_errors=1
+augroup HighlightTrailingSpaces
+  autocmd!
+  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
+  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
+augroup END
+
 filetype plugin off
 filetype indent off
-"クリップボードにコピーする
-set clipboard=unnamed,autoselect
-
 if has('vim_starting')
-	set runtimepath+=~/.vim/.bundle/neobundle.vim
+  "http://vim-users.jp/2011/10/hack238/
+  "$ git clone https://github.com/Shougo/neobundle.vim ~/.vim/neobundle.vim.git
+  "でインスコした後初期のNeoBundleInstallにはこっちのパスを使う
+	"set runtimepath+=~/.vim/neobundle.vim.git
+  set runtimepath+=~/.vim/.bundle/neobundle.vim
 	call neobundle#rc(expand('~/.vim/.bundle'))
 endif
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
@@ -31,6 +44,7 @@ let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
+"~/.vim/.bundle/vimproc まで移動して$make -f make_mac.mak
 
 "NeoBundle 'git://github.com/Shougo/vim-vcs.git'
 NeoBundle 'git://github.com/Shougo/vimfiler.git'
@@ -39,7 +53,9 @@ NeoBundle 'git://github.com/Shougo/vimfiler.git'
 
 NeoBundle 'thinca/vim-quickrun.git'
 let g:quickrun_config = {}
+"vimpricで非同期実行
 let g:quickrun_config._ = {'runner' : 'vimproc'}
+"Markedアプリと連携
 let g:quickrun_config.markdown = {
   \ 'outputter' : 'null',
   \ 'command' : 'open',
@@ -47,6 +63,7 @@ let g:quickrun_config.markdown = {
   \ 'args' : 'Marked',
   \ 'exec' : '%c %o %a %s',
   \ }
+
 NeoBundle 'endwise.vim'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 let g:user_zen_settings = { 'indentation':'  ' }
@@ -64,16 +81,5 @@ NeoBundle 'git://github.com/tpope/vim-fugitive.git'
 NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 filetype plugin on
 filetype indent on
-"行番号をつける
-set number
-"無駄なスペース１個分を見つけてハイライト
-let ruby_space_errors=1
-augroup HighlightTrailingSpaces
-  autocmd!
-  autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
-  autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
-augroup END
-"ヤンクの内容をクリップボードにコピー
-set clipboard=unnamed,autoselect
 
 let g:vimfiler_as_default_explorer = 1
