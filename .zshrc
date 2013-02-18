@@ -38,3 +38,10 @@ alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
 
 # home brewのパスを優先するように
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+
+#rvmインスコ
+#bash -s stable < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+#rvmのためにLLVM使わない
+#brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb[
+alias gcc='gcc-4.2'
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
