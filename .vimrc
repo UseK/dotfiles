@@ -63,7 +63,8 @@ let g:quickrun_config.markdown = {
   \ 'args' : 'Marked',
   \ 'exec' : '%c %o %a %s',
   \ }
-
+"CofeeScriptのコンパイル結果を表示
+let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
 NeoBundle 'endwise.vim'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 let g:user_zen_settings = { 'indentation':'  ' }
@@ -83,6 +84,7 @@ NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'JavaScript-syntax'
 filetype plugin on
 filetype indent on
 
