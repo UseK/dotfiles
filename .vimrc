@@ -85,6 +85,7 @@ NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'JavaScript-syntax'
+NeoBundle 'git://github.com/scrooloose/syntastic.git'
 filetype plugin on
 filetype indent on
 
