@@ -1,2 +1,6 @@
+#for Emacs
 *~
+#for OSX
 .DS_Store
+#for Vim
+*.swp
