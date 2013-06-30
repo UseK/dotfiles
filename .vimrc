@@ -25,6 +25,20 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
 
+"iTerms2のみ、インサートモード中にカーソルの形状を変える
+let &t_SI = "\e]50;CursorShape=1\x7"
+let &t_EI = "\e]50;CursorShape=0\x7"
+"inoremap <Esc> <Esc>gg`]
+
+"Escの反応を早くする, zen-codingの連続押しもシビアになる
+"set timeoutlen=200
+
+
+" カーソル行を強調表示しない
+"set nocursorline
+" " 挿入モードの時のみ、カーソル行をハイライトする
+"autocmd InsertEnter,InsertLeave * set cursorline!
+
 filetype plugin off
 filetype indent off
 if has('vim_starting')
