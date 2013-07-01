@@ -4,7 +4,16 @@ set whichwrap=b,s,h,l,<,>,[,]
 "セミコロンでコマンド
 noremap ; :
 noremap : ;
+"バックスペースで何でも消す
 set backspace=eol,start,indent
+"コントロールコードを入力する時は
+"Ctrl+Shift+vを入力してからコードを入力
+"例：Ctrl+Shift+v Ctrl+hで^H
+"ノーマルモードでもCtrl+hでバックスペース
+nnoremap  X
+"長い行において、表示行単位で移動する
+noremap k gk
+noremap j gj
 "タブの幅をスペース二個分に
 set tabstop=2
 set shiftwidth=2
