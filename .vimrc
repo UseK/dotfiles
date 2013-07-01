@@ -4,7 +4,16 @@ set whichwrap=b,s,h,l,<,>,[,]
 "セミコロンでコマンド
 noremap ; :
 noremap : ;
+"バックスペースで何でも消す
 set backspace=eol,start,indent
+"コントロールコードを入力する時は
+"Ctrl+Shift+vを入力してからコードを入力
+"例：Ctrl+Shift+v Ctrl+hで^H
+"ノーマルモードでもCtrl+hでバックスペース
+nnoremap  X
+"長い行において、表示行単位で移動する
+noremap k gk
+noremap j gj
 "タブの幅をスペース二個分に
 set tabstop=2
 set shiftwidth=2
@@ -24,6 +33,20 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
+
+"iTerms2のみ、インサートモード中にカーソルの形状を変える
+let &t_SI = "\e]50;CursorShape=1\x7"
+let &t_EI = "\e]50;CursorShape=0\x7"
+"inoremap <Esc> <Esc>gg`]
+
+"Escの反応を早くする, zen-codingの連続押しもシビアになる
+"set timeoutlen=200
+
+
+" カーソル行を強調表示しない
+"set nocursorline
+" " 挿入モードの時のみ、カーソル行をハイライトする
+"autocmd InsertEnter,InsertLeave * set cursorline!
 
 filetype plugin off
 filetype indent off
