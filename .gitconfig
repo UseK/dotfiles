@@ -2,7 +2,7 @@
 	name = UseK
 	email = use.k.james@gmail.com
 [core]
-	excludesfile = /Users/UseK/.gitignore_global
+	excludesfile = ~/.gitignore_global
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
