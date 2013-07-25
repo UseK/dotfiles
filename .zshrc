@@ -34,7 +34,9 @@ esac
 
 #MacVimの設定
 alias mvim='/Applications/MacVim.app/Contents/MacOS/mvim'
-alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+#ctagsはhomebrewの使おう
+#alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
+
 
 # home brewのパスを優先するように
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH

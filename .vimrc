@@ -109,6 +109,7 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
+NeoBundle 'https://github.com/szw/vim-tags'
 filetype plugin on
 filetype indent on
 
