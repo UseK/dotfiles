@@ -4,10 +4,18 @@ compinit
 #プロンプトにカレントディレクトリ，ユーザ名を２行で表示
 autoload colors
 colors
+#Git
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' formats '(%s)-[%b]'
+zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+precmd () {
+    psvar=()
+    LANG=en_US.UTF-8 vcs_info
+    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
+}
 PROMPT="
-%{${HOST}:${fg[yellow]}%}%~%{${reset_color}%} 
-[%n]$ "
-
+%{${HOST}:${fg[yellow]}%}%~%{${reset_color}%}
+%F{green}%1v%f[%n]$ "
 PROMPT2='[%n]> ' 
 
 #ターミナルのタイトルを「ユーザ名@ホスト名」に
