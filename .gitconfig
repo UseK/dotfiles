@@ -11,3 +11,5 @@
 	trustExitCode = true
 [color]
 	ui = true
+[alias]
+	last = log -1 HEAD

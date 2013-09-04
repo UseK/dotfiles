@@ -5,3 +5,5 @@
 .DS_Store
 #for Vim
 *.swp
+#for ctags
+tags
