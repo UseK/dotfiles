@@ -62,7 +62,7 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 #brew install https://raw.github.com/Homebrew/homebrew-dupes/master/apple-gcc42.rb[
 #alias gcc='gcc-4.2'
 #PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+#export PATH="$HOME/.rbenv/bin:$PATH"
+#eval "$(rbenv init -)"
 
 #bindkey -v
