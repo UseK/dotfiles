@@ -48,6 +48,9 @@ let &t_EI = "\e]50;CursorShape=0\x7"
 " " 挿入モードの時のみ、カーソル行をハイライトする
 "autocmd InsertEnter,InsertLeave * set cursorline!
 
+"折りたたみを構文単位に
+set foldmethod=syntax
+
 filetype plugin off
 filetype indent off
 if has('vim_starting')
