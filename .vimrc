@@ -33,7 +33,11 @@ augroup HighlightTrailingSpaces
   autocmd VimEnter,WinEnter,ColorScheme * highlight TrailingSpaces term=underline guibg=Red ctermbg=Red
   autocmd VimEnter,WinEnter * match TrailingSpaces /\s\+$/
 augroup END
-
+"自動改行を行わない
+set textwidth=0
+"vモードで*で選択した範囲の文字列を検索する
+vnoremap <silent> * "vy/\V<C-r>=substitute(escape(@v,'\/'),"\n",'\\n','g')<CR><CR>
+"因みに選択した範囲の文字数をカウントするには「'<,'>s/./&/g」
 "iTerms2のみ、インサートモード中にカーソルの形状を変える
 let &t_SI = "\e]50;CursorShape=1\x7"
 let &t_EI = "\e]50;CursorShape=0\x7"
