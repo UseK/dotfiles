@@ -117,6 +117,7 @@ NeoBundle 'git://github.com/mattn/zencoding-vim.git'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'https://github.com/szw/vim-tags'
+NeoBundle 'https://github.com/thinca/vim-ref'
 filetype plugin on
 filetype indent on
 
