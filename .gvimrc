@@ -15,6 +15,8 @@ if has('gui_macvim') || has('win32')
 	set tabstop=2
 	set shiftwidth=2
 	set autoindent
+  "自動改行の幅を0に
+  set textwidth=0
 
 	set number           " 行番号表示
 	set nobackup         " バックアップなし
