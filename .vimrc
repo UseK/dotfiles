@@ -118,6 +118,7 @@ NeoBundle 'JavaScript-syntax'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'https://github.com/szw/vim-tags'
 NeoBundle 'https://github.com/thinca/vim-ref'
+NeoBundle 'https://github.com/thinca/vim-qfreplace.git'
 filetype plugin on
 filetype indent on
 
