@@ -77,7 +77,7 @@ NeoBundle 'git://github.com/Shougo/vimproc.git'
 "~/.vim/.bundle/vimproc まで移動して$make -f make_mac.mak
 
 "NeoBundle 'git://github.com/Shougo/vim-vcs.git'
-NeoBundle 'git://github.com/Shougo/vimfiler.git'
+"NeoBundle 'git://github.com/Shougo/vimfiler.git'
 "NeoBundle 'git://github.com/Shougo/vimshell.git'
 "NeoBundle 'git://github.com/Shougo/vinarise.git'
 
@@ -96,8 +96,6 @@ let g:quickrun_config.markdown = {
 "CofeeScriptのコンパイル結果を表示
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
 NeoBundle 'endwise.vim'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
-let g:user_zen_settings = { 'indentation':'  ' }
 "NeoBundle 'Smooth-Scroll'
 "let g:scroll_factor = 5000
 "NeoBundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
@@ -113,12 +111,15 @@ NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
 NeoBundle 'git://github.com/tpope/vim-surround.git'
 NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'derekwyatt/vim-scala'
-NeoBundle 'git://github.com/mattn/zencoding-vim.git'
+NeoBundle 'https://github.com/mattn/emmet-vim'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
 NeoBundle 'https://github.com/szw/vim-tags'
 NeoBundle 'https://github.com/thinca/vim-ref'
 NeoBundle 'https://github.com/thinca/vim-qfreplace.git'
+NeoBundle 'https://github.com/ujihisa/unite-font.git'
+NeoBundle 'https://github.com/thinca/vim-guicolorscheme.git'
+NeoBundle 'desert.vim'
 filetype plugin on
 filetype indent on
 
