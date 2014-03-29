@@ -2,6 +2,13 @@
 autoload -U compinit
 compinit
 
+#コマンドの履歴を保存，立ち上げてる各zshで共有
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+setopt hist_ignore_dups     # ignore duplication command history list
+setopt share_history        # share command history dataコマンドの履歴を保存
+
 autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
