@@ -14,3 +14,7 @@
 	ui = true
 [alias]
 	last = log -1 HEAD
+	s = status
+  cancelcommit = reset --soft HEAD~
+  l = log --oneline
+  graph = log --graph --pretty='format:%C(yellow)%h%Creset %s %Cgreen(%an)%Creset %Cred%d%Creset'
