@@ -143,6 +143,8 @@ NeoBundle 'https://github.com/thinca/vim-qfreplace.git'
 NeoBundle 'https://github.com/ujihisa/unite-font.git'
 NeoBundle 'https://github.com/thinca/vim-guicolorscheme.git'
 NeoBundle 'desert.vim'
+NeoBundle 'https://github.com/jiangmiao/simple-javascript-indenter.git'
+NeoBundle 'https://github.com/vim-ruby/vim-ruby'
 filetype plugin on
 filetype indent on
 
