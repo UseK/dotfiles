@@ -54,6 +54,8 @@ let &t_EI = "\e]50;CursorShape=0\x7"
 
 "折りたたみを構文単位に
 set foldmethod=syntax
+"コマンドをステータスラインに表示する
+set showcmd
 
 filetype plugin off
 filetype indent off
