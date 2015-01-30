@@ -70,6 +70,27 @@ endif
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
+"Note: This option must set it in .vimrc(_vimrc).  NOT IN .gvimrc(_gvimrc)!
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+"vim-railsとの衝突を解消
+let g:neocomplcache_force_overwrite_completefunc = 1
+" Use neocomplcache.
+let g:neocomplcache_enable_at_startup = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplcache_min_syntax_length = 3
+let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+"NeoBundle 'Shougo/neocomplete'
+"let g:neocomplete#enable_at_startup = 1
+"let g:neocomplete#force_overwrite_completefunc = 1
+"Rubyスクリプトの編集中は.等を押下したタイミングでvimのオムニ補完を効かせる
+"if !exists('g:neocomplete#force_omni_input_patterns')
+"  let g:neocomplete#force_omni_input_patterns = {}
+"endif
+"let g:neocomplete#force_omni_input_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
+""let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 NeoBundle 'taichouchou2/vim-rsense'
 let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
 "let g:rsenseUseOmniFunc = 1
