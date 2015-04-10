@@ -1,3 +1,13 @@
 noremap : ;
 noremap ; :
 
+set hlsearch
+
+cnoremap <C-b> <Left>
+cnoremap <C-f> <Right>
+cnoremap <C-a> <Home>
+cnoremap <C-h> <Backspace>
+cnoremap <C-d> <Del>
+cnoremap <C-e> <End>
+
+nnoremap K :ShowTooltipDescription
