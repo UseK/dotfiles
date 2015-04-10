@@ -14,6 +14,10 @@ nnoremap  X
 "長い行において、表示行単位で移動する
 noremap k gk
 noremap j gj
+
+inoremap <C-Space> <C-x><C-o>
+inoremap <C-@> <C-Space>
+
 "タブの幅をスペース二個分に
 set tabstop=2
 set shiftwidth=2
@@ -56,6 +60,8 @@ let &t_EI = "\e]50;CursorShape=0\x7"
 set foldmethod=syntax
 "コマンドをステータスラインに表示する
 set showcmd
+"Windowを右へ分割
+set splitright
 
 filetype plugin off
 filetype indent off
@@ -65,8 +71,8 @@ if has('vim_starting')
   "でインスコした後初期のNeoBundleInstallにはこっちのパスを使う
 	"set runtimepath+=~/.vim/neobundle.vim.git
   set runtimepath+=~/.vim/.bundle/neobundle.vim
-	call neobundle#rc(expand('~/.vim/.bundle'))
 endif
+call neobundle#begin(expand('~/.vim/bundle/'))
 "NeoBundle 'git://github.com/Shougo/clang_complete.git'
 "NeoBundle 'git://github.com/Shougo/echodoc.git'
 NeoBundle 'git://github.com/Shougo/neocomplcache.git'
@@ -126,6 +132,7 @@ NeoBundle 'endwise.vim'
 "hi IndentGuidesOdd  guibg=red   ctermbg=3
 "hi IndentGuidesEven guibg=green ctermbg=4
 NeoBundle 'git://github.com/tpope/vim-rails.git'
+NeoBundle 'https://github.com/basyura/unite-rails.git'
 NeoBundle 'git://github.com/reinh/vim-rubytest.git'
 NeoBundle 'git://github.com/scrooloose/nerdtree.git'
 NeoBundle 'dbext.vim'
@@ -145,7 +152,10 @@ NeoBundle 'https://github.com/thinca/vim-guicolorscheme.git'
 NeoBundle 'desert.vim'
 NeoBundle 'https://github.com/jiangmiao/simple-javascript-indenter.git'
 NeoBundle 'https://github.com/vim-ruby/vim-ruby'
+NeoBundle 'https://github.com/ktvoelker/sbt-vim.git'
+call neobundle#end()
 filetype plugin on
 filetype indent on
+
 
 let g:vimfiler_as_default_explorer = 1
