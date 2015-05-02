@@ -1,8 +1,8 @@
 if has('gui_macvim')
 	set noimdisableactivate "IME自動OFF
 	" フォント設定
-	set guifontwide=Ricty\ Regular:h15
-	set guifont=Ricty\ Regular:h15
+	set guifontwide=Ricty\ Regular:h12
+  set guifont=Ricty\ Regular:h12
 endif
 
 if has('gui_macvim') || has('win32')
