@@ -15,12 +15,19 @@ nnoremap  X
 noremap k gk
 noremap j gj
 
+"Ctrl+jで空行を挿入
+nnoremap <C-j> :<C-u>call append(expand('.'), '')<Cr>
+
 inoremap <C-Space> <C-x><C-o>
 inoremap <C-@> <C-Space>
 
-"タブの幅をスペース二個分に
+"<TAB>の幅をスペース分個分で表示
 set tabstop=2
+"<TAB>入力でスペース二個分
+set softtabstop=2
+"vimの自動インデントでスペース二個分
 set shiftwidth=2
+"自動インデント
 set autoindent
 "タブボタンでスペースを入力
 set expandtab
@@ -58,6 +65,7 @@ let &t_EI = "\e]50;CursorShape=0\x7"
 
 "折りたたみを構文単位に
 set foldmethod=syntax
+set foldlevel=1
 "コマンドをステータスラインに表示する
 set showcmd
 "Windowを右へ分割
@@ -99,7 +107,7 @@ let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
 ""let g:neocomplcache_omni_patterns.ruby = '[^. *\t]\.\w*\|\h\w*::'
 NeoBundle 'taichouchou2/vim-rsense'
 let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
-"let g:rsenseUseOmniFunc = 1
+let g:rsenseUseOmniFunc = 1
 NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
 NeoBundle 'git://github.com/Shougo/unite.vim.git'
 NeoBundle 'git://github.com/Shougo/vimproc.git'
@@ -124,10 +132,37 @@ let g:quickrun_config.markdown = {
   \ }
 "CofeeScriptのコンパイル結果を表示
 let g:quickrun_config['coffee'] = {'command' : 'coffee', 'exec' : ['%c -cbp %s']}
+let g:quickrun_config['ruby.rspec'] = {
+\ 'command': 'rspec',
+\ 'exec': ['bundle exec %c %o %s %a']
+\}
+let g:quickrun_config.rspecl = {
+\ 'type': 'ruby.rspec',
+\ 'command': 'rspec',
+\ 'exec': "bundle exec %c %s -l %{line('.')}",
+\}
+augroup RSpecQuickrun
+  autocmd!
+  autocmd BufWinEnter,BufNewFile *_spec.rb set filetype=ruby.rspec
+augroup END
+nnoremap <Leader>rr :<C-u>QuickRun rspecl<CR>
+
 NeoBundle 'endwise.vim'
 "NeoBundle 'Smooth-Scroll'
 "let g:scroll_factor = 5000
-"NeoBundle 'git://github.com/nathanaelkane/vim-indent-guides.git'
+NeoBundle 'nathanaelkane/vim-indent-guides.git'
+" Vim 起動時 vim-indent-guides を自動起動
+let g:indent_guides_enable_on_vim_startup=1
+" ガイドをスタートするインデントの量
+let g:indent_guides_start_level=2
+" 自動カラー無効
+let g:indent_guides_auto_colors=0
+" 奇数番目のインデントの色
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#555555 ctermbg=black
+" 偶数番目のインデントの色
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#444444 ctermbg=darkgray
+" ガイドの幅
+let g:indent_guides_guide_size = 1
 "let g:indent_guides_auto_colors = 0
 "hi IndentGuidesOdd  guibg=red   ctermbg=3
 "hi IndentGuidesEven guibg=green ctermbg=4
@@ -144,6 +179,10 @@ NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'https://github.com/mattn/emmet-vim'
 NeoBundle 'JavaScript-syntax'
 NeoBundle 'git://github.com/scrooloose/syntastic.git'
+let g:syntastic_mode_map = { 'mode': 'passive',
+            \ 'active_filetypes': ['ruby'] }
+let g:syntastic_ruby_checkers = ['rubocop']
+
 NeoBundle 'https://github.com/szw/vim-tags'
 NeoBundle 'https://github.com/thinca/vim-ref'
 NeoBundle 'https://github.com/thinca/vim-qfreplace.git'
@@ -153,6 +192,44 @@ NeoBundle 'desert.vim'
 NeoBundle 'https://github.com/jiangmiao/simple-javascript-indenter.git'
 NeoBundle 'https://github.com/vim-ruby/vim-ruby'
 NeoBundle 'https://github.com/ktvoelker/sbt-vim.git'
+NeoBundle 'thoughtbot/vim-rspec'
+" RSpec.vim mappings
+"map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
+
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
+" Plugin key-mappings.
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+NeoBundle 'https://github.com/ngmy/vim-rubocop.git'
+NeoBundle 'https://github.com/rust-lang/rust.vim.git'
+
+" SuperTab like snippets behavior.
+imap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: pumvisible() ? "\<C-n>" : "\<TAB>"
+smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
+\ "\<Plug>(neosnippet_expand_or_jump)"
+\: "\<TAB>"
+
+" For snippet_complete marker.
+if has('conceal')
+  set conceallevel=2 concealcursor=niv
+endif
+
+" Enable snipMate compatibility feature.
+let g:neosnippet#enable_snipmate_compatibility = 1
+
+" Tell Neosnippet about the other snippets
+"let g:neosnippet#snippets_directory='~/.vim/bundle/vim-snippets/snippets'
+" 自分用 snippet ファイルの場所
+let s:my_snippet = '~/snippet/'
+let g:neosnippet#snippets_directory = s:my_snippet
 call neobundle#end()
 filetype plugin on
 filetype indent on
