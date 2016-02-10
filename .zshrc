@@ -28,8 +28,8 @@ precmd () {
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
 PROMPT="
-%{${HOST}:${fg[yellow]}%}%~%{${reset_color}%}
-%F{green}%1v%f[%n]$ "
+%{${HOST}:${fg[yellow]}%}%~%{${reset_color}%}%F{green}%1v%f[%n]
+$ "
 PROMPT2='[%n]> ' 
 
 #ターミナルのタイトルを「ユーザ名@ホスト名」に
@@ -73,3 +73,10 @@ export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 #eval "$(rbenv init -)"
 
 #bindkey -v
+fg(){
+  find . -type f -name $1 | xargs grep  -H -n --color $2
+}
+
+alias be='bundle exec'
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
