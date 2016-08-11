@@ -1,9 +1,6 @@
 syntax on
 "行末、行頭でカーソルが止まらない
 set whichwrap=b,s,h,l,<,>,[,]
-"セミコロンでコマンド
-noremap ; :
-noremap : ;
 "バックスペースで何でも消す
 set backspace=eol,start,indent
 "コントロールコードを入力する時は
