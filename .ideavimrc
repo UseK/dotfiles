@@ -1,0 +1,14 @@
+"検索をファイルの先頭へ循環しない
+set nowrapscan
+"検索結果をハイライト
+set hlsearch
+"x キー削除でデフォルトレジスタに入れない
+nnoremap x "_x
+vnoremap x "_x
+" インサートモードから抜けると自動的にIMEをオフにする
+set iminsert=2
+"j, k による移動を折り返されたテキスト
+nnoremap j gj
+nnoremap k gk
+"vim-surround
+set surround
