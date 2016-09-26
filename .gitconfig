@@ -15,6 +15,7 @@
 [alias]
   last = log -1 HEAD
   s = status --short
+  d = diff
   cancelcommit = reset --soft HEAD~
   l = log --oneline --decorate=full
   graph = log --graph --pretty='format:%C(yellow)%h%Creset %ad %s %Cgreen(%an)%Creset %Cred%d%Creset' --all --date=short
