@@ -85,6 +85,11 @@ NeoBundle 'Shougo/neocomplete'
 let g:neocomplete#enable_at_startup = 1
 let g:neocomplete#force_overwrite_completefunc = 1
 let g:neocomplete#min_syntax_length = 3
+" ユーザ定義の辞書を指定
+let g:neocomplete#sources#dictionary#dictionaries = {
+  \ 'default' : '',
+  \ 'scala' : $HOME . '/dotfiles/scala.dict',
+  \ }
 
 NeoBundle 'taichouchou2/vim-rsense'
 let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
@@ -102,7 +107,14 @@ NeoBundle 'git://github.com/Shougo/vimproc.git'
 NeoBundle 'thinca/vim-quickrun.git'
 let g:quickrun_config = {}
 "vimpricで非同期実行
-let g:quickrun_config._ = {'runner' : 'vimproc'}
+let g:quickrun_config._ = {
+      \ 'runner'    : 'vimproc',
+      \ 'runner/vimproc/updatetime' : 60,
+      \ 'outputter' : 'error',
+      \ 'outputter/error/success' : 'buffer',
+      \ 'outputter/error/error'   : 'quickfix',
+      \ 'outputter/error/close_on_empty' : 1,
+      \ }
 "Markedアプリと連携
 let g:quickrun_config.markdown = {
   \ 'outputter' : 'null',
