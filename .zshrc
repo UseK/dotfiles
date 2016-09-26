@@ -2,6 +2,8 @@
 autoload -U compinit
 compinit
 
+export EDITOR=/usr/bin/vim
+
 #コマンドの履歴を保存，立ち上げてる各zshで共有
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
