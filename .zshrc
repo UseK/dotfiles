@@ -17,31 +17,6 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-#${fg[色指定]}と${reset_color}で囲んだ部分がカラー表示になる。
-autoload colors
-colors
-#Git
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' formats '(%s)-[%b]'
-zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
-zstyle ":vcs_info:*" enable git
-
-#precmdはzsh のプロンプトが表示される毎に実行される関数
-precmd () {
-    psvar=()
-    LANG=en_US.UTF-8 vcs_info
-    [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
-}
-
-CURRENT_DIR="%F{yellow}%~%f"
-GIT_STATUS="%F{green}%1v%f"
-#プロンプトにカレントディレクトリ，ユーザ名を２行で表示
-PROMPT="
-$CURRENT_DIR$GIT_STATUS
-$ "
-RPROMPT=""
-PROMPT2='[%n]> '
-
 #ターミナルのタイトルを「ユーザ名@ホスト名」に
 case "${TERM}" in
   kterm*|xterm)
@@ -104,3 +79,26 @@ load_if_exists () {
     fi
 }
 load_if_exists "$HOME/.zshrc_local"
+
+
+#${fg[色指定]}と${reset_color}で囲んだ部分がカラー表示になる。
+autoload colors
+colors
+#プロンプトにカレントディレクトリ，ユーザ名を２行で表示
+PROMPT="
+%F{yellow}%~%f
+$ "
+PROMPT2='[%n]> '
+
+#http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info/ を参考
+autoload -Uz vcs_info
+setopt prompt_subst
+#%c(stagestrで指定した文字列)と
+#%u(unstagedstrで指定した文字列)をformatに使用可能にする。
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' stagedstr "%F{green}M"
+zstyle ':vcs_info:git:*' unstagedstr "%F{red}M"
+zstyle ':vcs_info:*' formats "%F{white}%c%u[%b]%f"
+zstyle ':vcs_info:*' actionformats '[%b|%a]'
+precmd () { vcs_info }
+RPROMPT='${vcs_info_msg_0_}'
