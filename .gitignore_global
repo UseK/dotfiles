@@ -8,3 +8,5 @@
 *.swo
 #for ctags
 tags
+#for IDEA
+.idea
