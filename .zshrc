@@ -17,22 +17,30 @@ zle -N history-beginning-search-forward-end history-search-end
 bindkey "^P" history-beginning-search-backward-end
 bindkey "^N" history-beginning-search-forward-end
 
-#プロンプトにカレントディレクトリ，ユーザ名を２行で表示
+#${fg[色指定]}と${reset_color}で囲んだ部分がカラー表示になる。
 autoload colors
 colors
 #Git
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' formats '(%s)-[%b]'
 zstyle ':vcs_info:*' actionformats '(%s)-[%b|%a]'
+zstyle ":vcs_info:*" enable git
+
+#precmdはzsh のプロンプトが表示される毎に実行される関数
 precmd () {
     psvar=()
     LANG=en_US.UTF-8 vcs_info
     [[ -n "$vcs_info_msg_0_" ]] && psvar[1]="$vcs_info_msg_0_"
 }
+
+CURRENT_DIR="%F{yellow}%~%f"
+GIT_STATUS="%F{green}%1v%f"
+#プロンプトにカレントディレクトリ，ユーザ名を２行で表示
 PROMPT="
-%{${HOST}:${fg[yellow]}%}%~%{${reset_color}%}%F{green}%1v%f[%n]
+$CURRENT_DIR$GIT_STATUS
 $ "
-PROMPT2='[%n]> ' 
+RPROMPT=""
+PROMPT2='[%n]> '
 
 #ターミナルのタイトルを「ユーザ名@ホスト名」に
 case "${TERM}" in
