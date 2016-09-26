@@ -82,3 +82,17 @@ fg(){
 alias be='bundle exec'
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+alias ansible_ping='ansible testserver -m ping'
+alias ansible_uptime='ansible testserver -m command -a uptime'
+alias ansible_tail='ansible testserver -a "tail /var/log/dmesg"'
+alias ansible_suto_tail='ansible testserver -s -a "tail /var/log/syslog"'
+alias ansible_install_nginx='ansible testserver -s -m apt -a "name=nginx update_cache=yes"'
+alias ansible_restart_nginx='ansible testserver -s -m service -a "name=nginx state=restarted"'
+
+load_if_exists () {
+    if [ -e $1 ]; then
+        source $1
+    fi
+}
+load_if_exists "$HOME/.zshrc_local"
