@@ -12,3 +12,6 @@ nnoremap j gj
 nnoremap k gk
 "vim-surround
 set surround
+"ヤンクの内容をクリップボードにコピー
+"vim上でハイライトして選択したテキストがクリップボードにコピー
+set clipboard=unnamed,autoselect
