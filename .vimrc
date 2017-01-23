@@ -78,8 +78,8 @@ if has('vim_starting')
   set runtimepath+=~/.vim/.bundle/neobundle.vim
 endif
 call neobundle#begin(expand('~/.vim/bundle/'))
-"NeoBundle 'git://github.com/Shougo/clang_complete.git'
-"NeoBundle 'git://github.com/Shougo/echodoc.git'
+"NeoBundle 'https://github.com/Shougo/clang_complete.git'
+"NeoBundle 'https://github.com/Shougo/echodoc.git'
 
 NeoBundle 'Shougo/neocomplete'
 let g:neocomplete#enable_at_startup = 1
@@ -94,15 +94,15 @@ let g:neocomplete#sources#dictionary#dictionaries = {
 NeoBundle 'taichouchou2/vim-rsense'
 let g:rsenseHome = "/Users/yf/.vim/rsense-0.3"
 let g:rsenseUseOmniFunc = 1
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/vimproc.git'
+NeoBundle 'https://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'https://github.com/Shougo/unite.vim.git'
+NeoBundle 'https://github.com/Shougo/vimproc.git'
 "~/.vim/.bundle/vimproc まで移動して$make -f make_mac.mak
 
-"NeoBundle 'git://github.com/Shougo/vim-vcs.git'
-"NeoBundle 'git://github.com/Shougo/vimfiler.git'
-"NeoBundle 'git://github.com/Shougo/vimshell.git'
-"NeoBundle 'git://github.com/Shougo/vinarise.git'
+"NeoBundle 'https://github.com/Shougo/vim-vcs.git'
+"NeoBundle 'https://github.com/Shougo/vimfiler.git'
+"NeoBundle 'https://github.com/Shougo/vimshell.git'
+"NeoBundle 'https://github.com/Shougo/vinarise.git'
 
 NeoBundle 'thinca/vim-quickrun.git'
 let g:quickrun_config = {}
@@ -159,19 +159,19 @@ let g:indent_guides_guide_size = 1
 "let g:indent_guides_auto_colors = 0
 "hi IndentGuidesOdd  guibg=red   ctermbg=3
 "hi IndentGuidesEven guibg=green ctermbg=4
-NeoBundle 'git://github.com/tpope/vim-rails.git'
+NeoBundle 'https://github.com/tpope/vim-rails.git'
 NeoBundle 'https://github.com/basyura/unite-rails.git'
-NeoBundle 'git://github.com/reinh/vim-rubytest.git'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'https://github.com/reinh/vim-rubytest.git'
+NeoBundle 'https://github.com/scrooloose/nerdtree.git'
 NeoBundle 'dbext.vim'
-NeoBundle 'git://github.com/tpope/vim-fugitive.git'
-NeoBundle 'git://github.com/kchmck/vim-coffee-script.git'
-NeoBundle 'git://github.com/tpope/vim-surround.git'
-NeoBundle 'git://github.com/Lokaltog/vim-powerline.git'
+NeoBundle 'https://github.com/tpope/vim-fugitive.git'
+NeoBundle 'https://github.com/kchmck/vim-coffee-script.git'
+NeoBundle 'https://github.com/tpope/vim-surround.git'
+NeoBundle 'https://github.com/Lokaltog/vim-powerline.git'
 NeoBundle 'derekwyatt/vim-scala'
 NeoBundle 'https://github.com/mattn/emmet-vim'
 NeoBundle 'JavaScript-syntax'
-NeoBundle 'git://github.com/scrooloose/syntastic.git'
+NeoBundle 'https://github.com/scrooloose/syntastic.git'
 let g:syntastic_mode_map = { 'mode': 'passive',
             \ 'active_filetypes': ['ruby'] }
 let g:syntastic_ruby_checkers = ['rubocop']
