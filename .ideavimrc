@@ -15,3 +15,6 @@ set surround
 "ヤンクの内容をクリップボードにコピー
 "vim上でハイライトして選択したテキストがクリップボードにコピー
 set clipboard=unnamed,autoselect
+"control 押しっぱなしでもウィンドウ間移動可能
+nnoremap <C-w><C-l> <C-w>l
+nnoremap <C-w><C-h> <C-w>h
