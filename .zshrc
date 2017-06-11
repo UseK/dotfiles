@@ -39,8 +39,6 @@ linux*)
   ;;
 esac
 
-#MacVimの設定
-alias mvim='/Applications/MacVim.app/Contents/MacOS/mvim'
 #ctagsはhomebrewの使おう
 #alias ctags='/Applications/MacVim.app/Contents/MacOS/ctags "$@"'
 
@@ -95,6 +93,7 @@ autoload -Uz vcs_info
 setopt prompt_subst
 #%c(stagestrで指定した文字列)と
 #%u(unstagedstrで指定した文字列)をformatに使用可能にする。
+zstyle ':vcs_info:git:*' simple-use true
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{green}M"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}M"
