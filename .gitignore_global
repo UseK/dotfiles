@@ -10,3 +10,7 @@
 tags
 #for IDEA
 .idea
+#for sbt
+target/
+#for python
+__pycache__/

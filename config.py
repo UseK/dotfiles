@@ -36,11 +36,16 @@ def configure(keymap):
     if 1:
         #keymap_global[ "LCmd-Space" ] = "Ctrl-Shift-Semicolon"  # Move cursor up
         #keymap_global[ "RCmd-Space" ] = "Ctrl-Shift-J"   # Move cursor up
+        keymap_global[ "Ctrl-M" ] = "Enter"               # Move to end of line
         keymap_global[ "Ctrl-P" ] = "Up"                  # Move cursor up
         keymap_global[ "Ctrl-N" ] = "Down"                # Move cursor down
         keymap_global[ "Ctrl-F" ] = "Right"               # Move cursor right
         keymap_global[ "Ctrl-B" ] = "Left"                # Move cursor left
-        keymap_global[ "Ctrl-M" ] = "Enter"               # Move to end of line
+        keymap_global[ "Ctrl-E" ] = "End"
+        #keymap_global[ "Ctrl-Semicolon" ] = "102", "Ctrl-Semicolon"
+        #keymap_global[ "Ctrl-OpenBracket" ] = "Esc", "102"
         keymap_global[ "Ctrl-OpenBracket" ] = "Esc", "102"
-        keymap_global["O-LCmd"] = "102"
-        keymap_global["O-RCmd"] = "104"
+        #keymap_global["O-LCmd"] = "102"
+        #keymap_global["O-RCmd"] = "104"
+        keymap_global["O-LCmd"] = keymap.InputKeyCommand("(102)")
+        keymap_global["O-RCmd"] = keymap.InputKeyCommand("(104)")
