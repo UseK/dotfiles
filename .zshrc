@@ -102,3 +102,4 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xargs git rm --cached'
+alias ll='ls -alF'
