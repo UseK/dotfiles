@@ -105,3 +105,8 @@ precmd () { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xargs git rm --cached'
 alias ll='ls -alF'
+
+function show_cpu_info_in_mac() {
+  sysctl machdep.cpu.brand_string
+  system_profiler SPHardwareDataType
+}
