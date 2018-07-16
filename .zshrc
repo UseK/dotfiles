@@ -15,7 +15,9 @@ autoload history-search-end
 zle -N history-beginning-search-backward-end history-search-end
 zle -N history-beginning-search-forward-end history-search-end
 bindkey "^[[A" history-beginning-search-backward-end
+bindkey "^P" history-beginning-search-backward-end
 bindkey "^[[B" history-beginning-search-forward-end
+bindkey "^N" history-beginning-search-forward-end
 
 #ターミナルのタイトルを「ユーザ名@ホスト名」に
 case "${TERM}" in
