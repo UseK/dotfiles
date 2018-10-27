@@ -110,3 +110,5 @@ function show_cpu_info_in_mac() {
   sysctl machdep.cpu.brand_string
   system_profiler SPHardwareDataType
 }
+export PATH=$HOME/.cargo/bin:${PATH}
+source ~/.cargo/env

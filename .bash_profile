@@ -19,3 +19,5 @@ alias x11="/Applications/Utilities/XQuartz.app/Contents/MacOS/X11"
 export GNUTERM=X11
 
 export RSENSE_HOME="$HOME/.vim/rsense-0.3"
+
+export PATH="$HOME/.cargo/bin:$PATH"
