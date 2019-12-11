@@ -18,3 +18,5 @@ set clipboard=unnamed,autoselect
 "control 押しっぱなしでもウィンドウ間移動可能
 nnoremap <C-w><C-l> <C-w>l
 nnoremap <C-w><C-h> <C-w>h
+"<C-h>を<BS>にマップしてても有効
+nnoremap <C-w><BS> <C-w>h
