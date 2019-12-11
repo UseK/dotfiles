@@ -18,6 +18,7 @@
   d = diff
   cancelcommit = reset --soft HEAD~
   l = log --oneline --decorate=full
+  pretty-log = log --pretty=format:'<%an> %h [%cd] %d %s' --date=format:'%m/%d %H:%M'
   graph = log --graph --pretty='format:%C(yellow)%h%Creset %ad %s %Cgreen(%an)%Creset %Cred%d%Creset' --all --date=short
   diffw = diff --color-words
 [credential]
