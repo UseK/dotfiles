@@ -112,3 +112,8 @@ function show_cpu_info_in_mac() {
 }
 export PATH=$HOME/.cargo/bin:${PATH}
 source ~/.cargo/env
+function nkf-w-d--overwrite() {
+  nkf -w -d --overwrite $1
+}
+alias sbt-new='sbt new scala/scala-seed.g8'
+alias ssh-keygen-l-f "ssh-keygen -l -f"
