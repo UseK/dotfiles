@@ -20,3 +20,5 @@
   l = log --oneline --decorate=full
   graph = log --graph --pretty='format:%C(yellow)%h%Creset %ad %s %Cgreen(%an)%Creset %Cred%d%Creset' --all --date=short
   diffw = diff --color-words
+[credential]
+	helper = osxkeychain
