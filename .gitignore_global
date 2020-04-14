@@ -16,3 +16,4 @@ target/
 __pycache__/
 #for Node.js
 node_modules/
+yarn-error.log
