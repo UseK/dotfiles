@@ -1,7 +1,3 @@
-#補間機能
-autoload -U compinit
-compinit
-
 export EDITOR=/usr/bin/vim
 
 #コマンドの履歴を保存，立ち上げてる各zshで共有
@@ -117,3 +113,8 @@ function nkf-w-d--overwrite() {
 }
 alias sbt-new='sbt new scala/scala-seed.g8'
 alias ssh-keygen-l-f "ssh-keygen -l -f"
+
+#補間機能、外部設定ファイルの読み込みが終わってから
+#(主にdockerの補完のため)
+autoload -U compinit
+compinit
