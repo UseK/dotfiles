@@ -1,3 +1,8 @@
+# complete docker commands
+if [ -e ~/.zsh/completions ]; then
+  fpath=(~/.zsh/completions $fpath)
+fi
+
 #補間機能
 autoload -U compinit
 compinit
