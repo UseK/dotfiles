@@ -3,10 +3,10 @@
 ;SendMode Input  ; Recommended for new scripts due to its superior speed and reliability.
 ;SetWorkingDir %A_ScriptDir%  ; Ensures a consistent starting directory.
 
-: Left<Alt>Space to Muhenkan
+; Left<Alt>Space to Muhenkan
 <!Space::Send, {vk1D}
 
-: Right<Alt>Space to Henkan
+; Right<Alt>Space to Henkan
 >!Space::Send, {vk1C}
 
 ; Applications you want to disable emacs-like keybindings
