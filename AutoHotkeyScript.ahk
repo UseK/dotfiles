@@ -103,3 +103,6 @@ is_target()
   Else
     Send {Left}
   Return
+
+<!<+]::Send, ^{Tab}
+<!<+[::Send, ^+{Tab}
