@@ -147,3 +147,10 @@ function nkf-w-d--overwrite() {
 }
 alias sbt-new='sbt new scala/scala-seed.g8'
 alias ssh-keygen-l-f "ssh-keygen -l -f"
+
+
+if type docker &>/dev/null; then
+  function show_docker_ipaddress() {
+    docker container inspect $1 --format {{'.NetworkSettings.IPAddress'}}
+  }
+fi
