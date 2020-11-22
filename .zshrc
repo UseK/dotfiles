@@ -1,7 +1,21 @@
 # complete docker commands
 if [ -e ~/.zsh/completions ]; then
-  fpath=(~/.zsh/completions $fpath)
+  fpath=(~/.zsh/completions:$fpath)
 fi
+
+# https://docs.brew.sh/Shell-Completion
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+
+# complete cargo commands
+if type cargo &>/dev/null; then
+  fpath=(~/.rustup/toolchains/stable-x86_64-apple-darwin/share/zsh/site-functions/_cargo:$fpath)
+fi
+
 
 #補間機能
 autoload -U compinit
