@@ -17,3 +17,5 @@ __pycache__/
 #for Node.js
 node_modules/
 yarn-error.log
+#for Visual Studio Code
+*.code-workspace
