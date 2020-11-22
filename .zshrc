@@ -39,7 +39,11 @@ zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
 #alias
 case "${OSTYPE}" in
 freebsd*|darwin*)
-  alias ls="ls -GF"
+  if type exa &>/dev/null; then
+    alias ls="exa --icons"
+  else
+    alias ls="ls -GF"
+  fi
   ;;
 linux*)
   alias ls="ls -F --color"
@@ -109,7 +113,14 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT='${vcs_info_msg_0_}'
 alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xargs git rm --cached'
-alias ll='ls -alF'
+
+
+
+if type exa &>/dev/null; then
+  alias ll="exa -l --icons"
+else
+  alias ll='ls -alF'
+fi
 
 function show_cpu_info_in_mac() {
   sysctl machdep.cpu.brand_string
