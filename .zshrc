@@ -154,3 +154,5 @@ if type docker &>/dev/null; then
     docker container inspect $1 --format {{'.NetworkSettings.IPAddress'}}
   }
 fi
+
+bindkey -e
