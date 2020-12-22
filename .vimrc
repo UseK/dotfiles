@@ -184,7 +184,7 @@ NeoBundle 'https://github.com/thinca/vim-guicolorscheme.git'
 NeoBundle 'desert.vim'
 NeoBundle 'https://github.com/jiangmiao/simple-javascript-indenter.git'
 NeoBundle 'https://github.com/vim-ruby/vim-ruby'
-NeoBundle 'https://github.com/ktvoelker/sbt-vim.git'
+"NeoBundle 'https://github.com/ktvoelker/sbt-vim.git'
 NeoBundle 'thoughtbot/vim-rspec'
 " RSpec.vim mappings
 "map <Leader>t :call RunCurrentSpecFile()<CR>
