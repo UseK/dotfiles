@@ -23,6 +23,10 @@ compinit
 
 export EDITOR=/usr/bin/vim
 
+#TmuxでもEmacsキーバインドが効くようにする
+#この設定の前にカスタムのbindkeyを設定してしまうとtmuxで設定が元に戻るので注意
+bindkey -e
+
 #コマンドの履歴を保存，立ち上げてる各zshで共有
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
@@ -155,4 +159,3 @@ if type docker &>/dev/null; then
   }
 fi
 
-bindkey -e
