@@ -20,3 +20,7 @@ nnoremap <C-w><C-l> <C-w>l
 nnoremap <C-w><C-h> <C-w>h
 "<C-h>を<BS>にマップしてても有効
 nnoremap <C-w><BS> <C-w>h
+
+"ビープ音を鳴らさない https://superuser.com/questions/622898/how-to-turn-off-the-bell-sound-in-intellij
+set visualbell
+set noerrorbells
