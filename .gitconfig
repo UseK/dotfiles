@@ -5,6 +5,14 @@
   excludesfile = ~/.gitignore_global
   editor = vim -c \"set fenc=utf-8\"
   quotepath = false
+  pager = delta
+[delta]
+    plus-style = "syntax #012800"
+    minus-style = "syntax #340001"
+    syntax-theme = Monokai Extended
+    navigate = true
+[interactive]
+    diffFilter = delta --color-only
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -33,3 +41,4 @@
 	allowed = wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 [init]
 	templatedir = ~/dotfiles/.git-templates/git-secrets
+	defaultBranch = main
