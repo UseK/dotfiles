@@ -31,6 +31,7 @@ brew "cmake"
 brew "deno"
 brew "docker", link: false
 brew "exa"
+brew "findutils"
 brew "libtool"
 brew "fontforge"
 brew "git"
