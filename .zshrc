@@ -140,6 +140,11 @@ else
   alias ll='ls -alF'
 fi
 
+# not overwrite
+alias mv="mv -i"
+alias cp="cp -i"
+alias rm="rm -i"
+
 function show_cpu_info_in_mac() {
   sysctl machdep.cpu.brand_string
   system_profiler SPHardwareDataType
