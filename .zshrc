@@ -149,8 +149,16 @@ function show_cpu_info_in_mac() {
   sysctl machdep.cpu.brand_string
   system_profiler SPHardwareDataType
 }
+
 export PATH=$HOME/.cargo/bin:${PATH}
 source ~/.cargo/env
+
+# cache when compile rust program
+# https://github.com/mozilla/sccache
+if type sccache &>/dev/null; then
+  export RUSTC_WRAPPER=$(which sccache)
+fi
+
 function nkf-w-d--overwrite() {
   nkf -w -d --overwrite $1
 }
