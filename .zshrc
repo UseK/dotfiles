@@ -48,7 +48,7 @@ case "${TERM}" in
     precmd() {
       echo -ne "\033]0;${USER}@${HOST}\007"
     }
-    ;;
+  ;;
 esac
 #色の設定
 export LSCOLORS=gxfxxxxxcxxxxxxxxxgxgx
@@ -56,16 +56,16 @@ export LS_COLORS='di=01;36:ln=01;35:ex=01;32'
 zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
 #alias
 case "${OSTYPE}" in
-freebsd*|darwin*)
-  if type exa &>/dev/null; then
-    alias ls="exa --icons"
-  else
-    alias ls="ls -GF"
-  fi
-  ;;
-linux*)
-  alias ls="ls -F --color"
-  ;;
+  freebsd*|darwin*)
+    if type exa &>/dev/null; then
+      alias ls="exa --icons"
+    else
+      alias ls="ls -GF"
+    fi
+    ;;
+  linux*)
+    alias ls="ls -F --color"
+    ;;
 esac
 
 #ctagsはhomebrewの使おう
@@ -101,9 +101,9 @@ alias ansible_install_nginx='ansible testserver -s -m apt -a "name=nginx update_
 alias ansible_restart_nginx='ansible testserver -s -m service -a "name=nginx state=restarted"'
 
 load_if_exists () {
-    if [ -e $1 ]; then
-        source $1
-    fi
+  if [ -e $1 ]; then
+    source $1
+  fi
 }
 load_if_exists "$HOME/.zshrc_local"
 
@@ -160,7 +160,7 @@ if type sccache &>/dev/null; then
 fi
 
 function nkf-w-d--overwrite() {
-  nkf -w -d --overwrite $1
+nkf -w -d --overwrite $1
 }
 alias sbt-new='sbt new scala/scala-seed.g8'
 alias ssh-keygen-l-f "ssh-keygen -l -f"
@@ -184,3 +184,16 @@ fi
 # If you need to use these commands with their normal names, you
 # can add a "gnubin" directory to your PATH from your bashrc like:
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
+
+
+# $ brew install pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+
+if type pyenv &>/dev/null; then
+  eval "$(pyenv init -)"
+fi
+
+if type zoxide &>/dev/null; then
+  eval "$(zoxide init zsh)"
+fi
