@@ -229,3 +229,5 @@ filetype indent on
 
 
 let g:vimfiler_as_default_explorer = 1
+
+colorscheme desert
