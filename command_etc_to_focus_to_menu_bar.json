@@ -1,0 +1,25 @@
+{
+  "title": "Command + Esc to Control + F2 (focus to menu bar)",
+  "rules": [
+    {
+      "description": "Command + Esc to Control + F2 (focus to menu bar)",
+      "manipulators": [
+        {
+          "type": "basic",
+          "from": {
+            "key_code": "escape",
+            "modifiers": {
+              "mandatory": ["command"]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f2",
+              "modifiers": ["control"]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
