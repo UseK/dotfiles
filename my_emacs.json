@@ -65,8 +65,7 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
-                "^com\\.sublimetext\\.",
-                "^com\\.microsoft\\.VSCode$"
+                "^com\\.sublimetext\\."
               ]
             }
           ]
@@ -154,8 +153,7 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
-                "^com\\.sublimetext\\.",
-                "^com\\.microsoft\\.VSCode$"
+                "^com\\.sublimetext\\."
               ]
             }
           ]
@@ -222,8 +220,7 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
-                "^com\\.sublimetext\\.",
-                "^com\\.microsoft\\.VSCode$"
+                "^com\\.sublimetext\\."
               ]
             }
           ]
@@ -290,8 +287,7 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
-                "^com\\.sublimetext\\.",
-                "^com\\.microsoft\\.VSCode$"
+                "^com\\.sublimetext\\."
               ]
             }
           ]
@@ -358,8 +354,7 @@
                 "^com\\.apple\\.x11$",
                 "^org\\.macosforge\\.xquartz\\.X11$",
                 "^org\\.macports\\.X11$",
-                "^com\\.sublimetext\\.",
-                "^com\\.microsoft\\.VSCode$"
+                "^com\\.sublimetext\\."
               ]
             }
           ]
