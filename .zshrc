@@ -58,7 +58,7 @@ zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
 case "${OSTYPE}" in
   freebsd*|darwin*)
     if type exa &>/dev/null; then
-      alias ls="exa --icons"
+      alias ls="exa -F --icons"
     else
       alias ls="ls -GF"
     fi
