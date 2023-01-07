@@ -146,8 +146,17 @@ alias cp="cp -i"
 alias rm="rm -i"
 
 function show_cpu_info_in_mac() {
+  echo ">sysctl machdep.cpu.brand_string"
   sysctl machdep.cpu.brand_string
+  echo ">system_profiler SPHardwareDataType"
   system_profiler SPHardwareDataType
+}
+
+function show_os_info_in_mac() {
+  echo ">sw_vers"
+  sw_vers
+  echo ">uname -a"
+  uname -a
 }
 
 export PATH=$HOME/.cargo/bin:${PATH}
@@ -197,3 +206,5 @@ fi
 if type zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
 fi
+
+alias cargo-generate-wasm-pack-template="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
