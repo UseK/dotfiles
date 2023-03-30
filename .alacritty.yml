@@ -30,23 +30,23 @@ colors:
 font:
   # Normal (roman) font face
   normal:
-    family: Hack Nerd Font Mono
+    family: HackGen Console NF
     style: Regular
 
   # Bold font face
   bold:
-    family: Hack Nerd Font Mono
+    family: HackGen Console NF
     style: Bold
 
   # Italic font face
   italic:
-    family: Hack Nerd Font Mono
+    family: HackGen Console NF
     style: Italic
 
   # Bold italic font face
   bold_italic:
-    family: Hack Nerd Font Mono
+    family: HackGen Console NF
     style: Bold Italic
 
   # Point size
-  size: 18.0
+  size: 24.0
