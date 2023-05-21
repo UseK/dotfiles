@@ -3,17 +3,20 @@
   email = use.k.james@gmail.com
 [core]
   excludesfile = ~/.gitignore_global
-  editor = vim -c \"set fenc=utf-8\"
+  # editor = vim -c \"set fenc=utf-8\"
   quotepath = false
+  # $ brew install git-delta
   pager = delta
 [delta]
   features = side-by-side line-numbers decorations
   whitespace-error-style = 22 reverse
+# $ brew install git-delta
 [delta "decorations"]
   commit-decoration-style = bold yellow box ul
   file-style = bold yellow ul
   file-decoration-style = none
 [interactive]
+    # $ brew install git-delta
     diffFilter = delta --color-only
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
@@ -34,6 +37,9 @@
   diffw = diff --color-words
 [credential]
 	helper = osxkeychain
+# Need $ brew install git-secrets
+# Otherwise following error
+# git: 'secrets' is not a git command. See 'git --help'.
 [secrets]
 	providers = git secrets --aws-provider
 	patterns = (A3T[A-Z0-9]|AKIA|AGPA|AIDA|AROA|AIPA|ANPA|ANVA|ASIA)[A-Z0-9]{16}
