@@ -146,7 +146,7 @@ alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xa
 
 
 if type exa &>/dev/null; then
-  alias ll="exa -l --icons"
+  alias ll="exa -F -l -g --icons"
 else
   alias ll='ls -alF'
 fi
