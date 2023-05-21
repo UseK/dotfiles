@@ -91,7 +91,10 @@ fg(){
 
 alias be='bundle exec'
 export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+
+if type rbenv &>/dev/null; then
+  eval "$(rbenv init -)"
+fi
 
 alias ansible_ping='ansible testserver -m ping'
 alias ansible_uptime='ansible testserver -m command -a uptime'
