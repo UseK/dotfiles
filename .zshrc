@@ -108,28 +108,36 @@ load_if_exists () {
 load_if_exists "$HOME/.zshrc_local"
 
 
-#${fg[色指定]}と${reset_color}で囲んだ部分がカラー表示になる。
-autoload colors
-colors
-#プロンプトにカレントディレクトリ，ユーザ名を２行で表示
-PROMPT="
-%F{yellow}%~%f
-$ "
-PROMPT2='[%n]> '
+if type starship &>/dev/null;
+then
+  eval "$(starship init zsh)"
+else
+  #${fg[色指定]}と${reset_color}で囲んだ部分がカラー表示になる。
+  autoload colors
+  colors
+  #プロンプトにカレントディレクトリ，ユーザ名を２行で表示
+  PROMPT="
+  %F{yellow}%~%f
+  $ "
+  PROMPT2='[%n]> '
 
-#http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info/ を参考
-autoload -Uz vcs_info
-setopt prompt_subst
-#%c(stagestrで指定した文字列)と
-#%u(unstagedstrで指定した文字列)をformatに使用可能にする。
-zstyle ':vcs_info:git:*' simple-use true
-zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' stagedstr "%F{green}M"
-zstyle ':vcs_info:git:*' unstagedstr "%F{red}M"
-zstyle ':vcs_info:*' formats "%F{white}%c%u[%b]%f"
-zstyle ':vcs_info:*' actionformats '[%b|%a]'
-precmd () { vcs_info }
-RPROMPT='${vcs_info_msg_0_}'
+  #http://tkengo.github.io/blog/2013/05/12/zsh-vcs-info/ を参考
+  autoload -Uz vcs_info
+  setopt prompt_subst
+  #%c(stagestrで指定した文字列)と
+  #%u(unstagedstrで指定した文字列)をformatに使用可能にする。
+  zstyle ':vcs_info:git:*' simple-use true
+  zstyle ':vcs_info:git:*' check-for-changes true
+  zstyle ':vcs_info:git:*' stagedstr "%F{green}M"
+  zstyle ':vcs_info:git:*' unstagedstr "%F{red}M"
+  zstyle ':vcs_info:*' formats "%F{white}%c%u[%b]%f"
+  zstyle ':vcs_info:*' actionformats '[%b|%a]'
+  precmd () { vcs_info }
+  RPROMPT='${vcs_info_msg_0_}'
+fi
+
+
+
 alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xargs git rm --cached'
 
 
