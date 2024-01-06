@@ -2,7 +2,7 @@
   name = UseK
   email = use.k.james@gmail.com
 [core]
-  excludesfile = ~/.gitignore_global
+  # excludesfile = ~/.gitignore_global
   # editor = vim -c \"set fenc=utf-8\"
   quotepath = false
   # $ brew install git-delta
