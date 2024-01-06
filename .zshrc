@@ -57,10 +57,12 @@ zstyle ':completion:*' list-colors 'di=36' 'ln=35' 'ex=32'
 #alias
 case "${OSTYPE}" in
   freebsd*|darwin*)
-    if type exa &>/dev/null; then
-      alias ls="exa -F --icons"
+    if type eza &>/dev/null; then
+      alias ls="eza -F --icons auto"
+      alias ll="eza -F --icons auto -l"
     else
       alias ls="ls -GF"
+      alias ll="ls -lGF"
     fi
     ;;
   linux*)
@@ -143,13 +145,6 @@ fi
 
 alias git-rm-ignored='git ls-files --full-name -i --exclude-from=.gitignore | xargs git rm --cached'
 
-
-
-if type exa &>/dev/null; then
-  alias ll="exa -F -l -g --icons"
-else
-  alias ll='ls -alF'
-fi
 
 # not overwrite
 alias mv="mv -i"
