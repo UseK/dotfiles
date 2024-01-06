@@ -12,10 +12,9 @@ if type brew &>/dev/null; then
 fi
 
 # complete cargo commands
-if type cargo &>/dev/null; then
-  fpath=(~/.rustup/toolchains/stable-x86_64-apple-darwin/share/zsh/site-functions/_cargo:$fpath)
-fi
-
+ if type cargo &>/dev/null; then
+   FPATH=~/.rustup/toolchains/stable-x86_64-apple-darwin/share/zsh/site-functions:$FPATH
+ fi
 
 #補間機能
 autoload -U compinit
