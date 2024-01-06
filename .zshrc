@@ -219,3 +219,6 @@ export PATH="$HOME/workspace/cli/node-cli/node_modules/.bin:$PATH"
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 
 alias lsusb="system_profiler SPUSBDataType"
+
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
