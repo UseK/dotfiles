@@ -217,3 +217,5 @@ alias cargo-generate-wasm-pack-template="cargo generate --git https://github.com
 export PATH="$HOME/workspace/cli/node-cli/node_modules/.bin:$PATH"
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
+
+alias lsusb="system_profiler SPUSBDataType"
