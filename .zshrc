@@ -223,4 +223,6 @@ export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
 # https://zellij.dev/documentation/integration#autostart-on-shell-creation
-eval "$(zellij setup --generate-auto-start zsh)"
+if type zellij &>/dev/null; then
+  eval "$(zellij setup --generate-auto-start zsh)"
+fi
