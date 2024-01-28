@@ -50,3 +50,8 @@ font:
 
   # Point size
   size: 18.0
+
+# For zellij, Alt + <n> => new pane. alt + <hjkl> => navitage
+# https://zellij.dev/documentation/faq#i-am-a-macos-user-how-can-i-use-the-alt-key
+window:
+  option_as_alt: Both
