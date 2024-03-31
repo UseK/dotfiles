@@ -208,6 +208,7 @@ fi
 
 if type zoxide &>/dev/null; then
   eval "$(zoxide init zsh)"
+  alias cd="z"
 fi
 
 alias cargo-generate-wasm-pack-template="cargo generate --git https://github.com/rustwasm/wasm-pack-template"
