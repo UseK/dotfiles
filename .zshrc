@@ -199,12 +199,10 @@ fi
 # can add a "gnubin" directory to your PATH from your bashrc like:
 PATH="/usr/local/opt/findutils/libexec/gnubin:$PATH"
 
-
 # $ brew install pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-
 if type pyenv &>/dev/null; then
+  export PYENV_ROOT="$HOME/.pyenv"
+  export PATH="$PYENV_ROOT/bin:$PATH"
   eval "$(pyenv init -)"
 fi
 
