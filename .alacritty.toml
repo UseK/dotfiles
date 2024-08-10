@@ -26,19 +26,19 @@ foreground = "0xffffff"
 size = 18.0
 
 [font.bold]
-family = "HackGen Console NF"
+family = "Bizin Gothic NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "HackGen Console NF"
+family = "Bizin Gothic NF"
 style = "Bold Italic"
 
 [font.italic]
-family = "HackGen Console NF"
+family = "Bizin Gothic NF"
 style = "Italic"
 
 [font.normal]
-family = "HackGen Console NF"
+family = "Bizin Gothic NF"
 style = "Regular"
 
 [window]
