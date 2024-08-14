@@ -1,4 +1,5 @@
 if status is-interactive
+  eval "$(/opt/homebrew/bin/brew shellenv)"
   # Commands to run in interactive sessions can go here
   starship init fish | source
   zoxide init fish | source
