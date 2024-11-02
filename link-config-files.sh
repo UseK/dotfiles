@@ -27,6 +27,8 @@ ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
+mv ~/.config/zed/settings.json ~/.config/zed/settings.json.old
+ln -s ~/dotfiles/dot-config-zed-settings.json ~/.config/zed/settings.json
 
 # # Use BizinGothicNF instead of font-hackgen-nerd
 # curl -OL https://github.com/yuru7/bizin-gothic/releases/download/v0.0.4/BizinGothicNF_v0.0.4.zip

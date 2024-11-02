@@ -1,0 +1,44 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run the `zed: Open Default Settings` command
+// from the command palette
+{
+  "ui_font_size": 15,
+  "buffer_font_family": "Bizin Gothic NF",
+  "buffer_font_size": 15,
+  "buffer_line_height": "standard",
+  "theme": {
+    "mode": "system",
+    "light": "One Light",
+    "dark": "Ayu Dark"
+  },
+  "vim_mode": true,
+  "format_on_save": "on",
+  "autosave": "on_focus_change",
+  "ui_font_family": "Bizin Gothic NF",
+  "base_keymap": "JetBrains",
+  "inlay_hints": {
+    "enabled": true,
+    "maxLength": null,
+    "lifetimeElisionHints": {
+      "useParameterNames": true,
+      "enable": "skip_trivial"
+    },
+    "closureReturnTypeHints": {
+      "enable": "always"
+    }
+  },
+  "lsp": {
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true
+        }
+      }
+    }
+  }
+}
