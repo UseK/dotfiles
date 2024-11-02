@@ -3,7 +3,7 @@
 brew install bat bottom dust eza git git-delta git-lfs git-secrets gnu-sed jq starship zellij zoxide volta fish
 git lfs install
 
-brew install --cask 1password alfred dropbox firefox google-japanese-ime rectangle alacritty discord font-hackgen-nerd karabiner-elements visual-studio-code slack zed
+brew install --cask 1password alfred dropbox firefox google-japanese-ime rectangle alacritty discord font-hackgen-nerd karabiner-elements visual-studio-code slack zed obs
 
 # To Develop Zed
 # https://zed.dev/docs/development/macos#troubleshooting
