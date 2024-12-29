@@ -1,0 +1,153 @@
+{
+    "description": "USキーボードのかな入力をWindowsのレイアウトにする",
+    "manipulators": [
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": {
+                "key_code": "hyphen",
+                "modifiers": { "mandatory": ["left_shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "close_bracket",
+                    "modifiers": ["left_shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": { "key_code": "equal_sign" },
+            "to": [{ "key_code": "backslash" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": { "key_code": "backslash" },
+            "to": [{ "key_code": "close_bracket" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": { "key_code": "grave_accent_and_tilde" },
+            "to": [
+                {
+                    "key_code": "quote",
+                    "modifiers": ["left_shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": { "key_code": "close_bracket" },
+            "to": [{ "key_code": "equal_sign" }],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": {
+                "key_code": "close_bracket",
+                "modifiers": { "mandatory": ["left_shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "open_bracket",
+                    "modifiers": ["left_shift"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": {
+                "key_code": "open_bracket",
+                "modifiers": { "mandatory": ["left_shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "equal_sign",
+                    "modifiers": ["left_shift"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
