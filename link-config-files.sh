@@ -1,6 +1,6 @@
 # bat bottom dust eza gh git git-delta git-secrets gnu-sed go grype jq libmpc mysql poetry procs qemu reattach-to-user-namespace sbom-tool starship syft veeso/termscp/termscp volta xeol zellij zoxide
 
-brew install bat bottom dust eza git git-delta git-lfs git-secrets gnu-sed jq starship zellij zoxide volta fish
+brew install bat bottom dust eza git git-delta git-lfs git-secrets gnu-sed jq starship zellij zoxide volta fish 1password-cli
 git lfs install
 
 brew install --cask 1password alfred dropbox firefox rectangle alacritty discord karabiner-elements visual-studio-code slack zed obs
