@@ -1,6 +1,10 @@
 if status is-interactive
   fish_add_path $HOME/.cargo/bin
   eval "$(/opt/homebrew/bin/brew shellenv)"
+  # https://developer.1password.com/docs/cli/reference/#shell-completion
+  if type op &>/dev/null;
+    op completion fish | source
+  end
   # Commands to run in interactive sessions can go here
   starship init fish | source
   zoxide init fish | source
