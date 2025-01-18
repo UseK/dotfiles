@@ -15,6 +15,9 @@ if status is-interactive
     alias ls="ls -GF"
     alias ll="ls -lGF"
   end
+  if type bat &>/dev/null;
+    alias cat="bat -pp"
+  end
 end
 
 if status --is-login
