@@ -11,7 +11,7 @@ ln -s ~/dotfiles/.vimrc ~/.vimrc
 ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
 mv ~/.config/zed/settings.json ~/.config/zed/settings.json.old
 ln -s ~/dotfiles/dot-config-zed-settings.json ~/.config/zed/settings.json
-
+ln -s ~/dotfiles/dot-config-zellij-config.kdl ~/.config/zellij/config.kdl
 # # Use BizinGothicNF instead of font-hackgen-nerd
 # curl -OL https://github.com/yuru7/bizin-gothic/releases/download/v0.0.4/BizinGothicNF_v0.0.4.zip
 # unzip -o BizinGothicNF_v0.0.4.zip
