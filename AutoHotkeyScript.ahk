@@ -97,7 +97,8 @@ is_target()
   Return
 }
 
-^a::
+; NOT Trigger from Alt + a
+$^a::
 {
   If is_target()
     Send A_ThisHotkey
@@ -133,7 +134,8 @@ is_target()
   Return
 }
 
-^f::
+; NOT Trigger from Alt + f
+$^f::
 {
   If is_target()
     Send A_ThisHotkey
@@ -150,6 +152,46 @@ is_target()
     Send "{Left}"
   Return
 }
+
+!a::
+{
+  Send "^a"
+}
+
+!c::
+{
+  Send "^c"
+}
+
+!v::
+{
+  Send "^v"
+}
+
+!f::
+{
+  Send "^f"
+  Return
+}
+
+!w::
+{
+  Send "^w"
+  Return
+}
+
+!x::
+{
+  Send "^x"
+  Return
+}
+
+!z::
+{
+  Send "^z"
+  Return
+}
+
 
 <!<+]:: Send "^{Tab}"
 <!<+[:: Send "^+{Tab}"
