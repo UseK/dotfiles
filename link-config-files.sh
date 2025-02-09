@@ -8,7 +8,7 @@ ln -s ~/dotfiles/.alacritty.toml ~/.alacritty.toml
 ln -s ~/dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/dotfiles/.zshrc ~/.zshrc
 ln -s ~/dotfiles/.vimrc ~/.vimrc
-ln -s ~/dotfiles/config.fish ~/.config/fish/config.fish
+ln -s ~/dotfiles/dot-config-fish-config.fish ~/.config/fish/config.fish
 mv ~/.config/zed/settings.json ~/.config/zed/settings.json.old
 ln -s ~/dotfiles/dot-config-zed-settings.json ~/.config/zed/settings.json
 ln -s ~/dotfiles/dot-config-zellij-config.kdl ~/.config/zellij/config.kdl
