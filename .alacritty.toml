@@ -10,7 +10,7 @@ yellow = "0xffff00"
 
 [colors.normal]
 black = "0x000000"
-blue = "0x0000ee"
+blue = "0x005cff"    # More bright than xterm default 0x0000ee
 cyan = "0x00cdcd"
 green = "0x00cd00"
 magenta = "0xcd00cd"
