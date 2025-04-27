@@ -36,3 +36,6 @@ function show_os_info_in_mac
   echo ">uname -a"
   uname -a
 end
+# https://docs.volta.sh/guide/getting-started
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
