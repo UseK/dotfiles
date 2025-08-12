@@ -23,7 +23,7 @@ background = "0x000000"
 foreground = "0xffffff"
 
 [font]
-size = 18.0
+size = 24.0
 
 [font.bold]
 family = "Bizin Gothic NF"
