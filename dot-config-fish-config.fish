@@ -20,6 +20,7 @@ if status is-interactive
   if type bat &>/dev/null;
     alias cat="bat -pp"
   end
+  eval (zellij setup --generate-auto-start fish | string collect)
 end
 
 if status --is-login

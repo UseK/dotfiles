@@ -324,7 +324,7 @@ default_mode "normal"
 //   - true (default, enabled)
 //   - false
 // 
-// pane_frames false
+pane_frames false
  
 // When attaching to an existing session with other users,
 // should the session be mirrored (true)
@@ -445,3 +445,5 @@ default_mode "normal"
 // Default: true (if the host terminal supports it)
 // 
 // support_kitty_keyboard_protocol false
+// スタートアップでTIPSを表示しない
+show_startup_tips false
