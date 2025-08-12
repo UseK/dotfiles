@@ -1,5 +1,7 @@
 if status is-interactive
   fish_add_path $HOME/.cargo/bin
+  # Use commands installed with pip
+  fish_add_path $HOME/Library/Python/3.9/bin
   eval "$(/opt/homebrew/bin/brew shellenv)"
   # https://developer.1password.com/docs/cli/reference/#shell-completion
   if type op &>/dev/null;
