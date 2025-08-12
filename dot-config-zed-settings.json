@@ -7,9 +7,9 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
-  "ui_font_size": 15,
+  "ui_font_size": 14.5,
   "buffer_font_family": "Bizin Gothic NF",
-  "buffer_font_size": 15,
+  "buffer_font_size": 14.5,
   "buffer_line_height": "standard",
   "theme": {
     "mode": "system",
