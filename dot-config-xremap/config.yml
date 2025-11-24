@@ -1,0 +1,19 @@
+keymap:
+  - name: Left(Rignt) super + space -> IME off(on)
+    remap:
+      SUPER_R: Henkan
+      SUPER_L: Muhenkan
+    remap:
+  - name: Minimal Emacs keybind
+    remap:
+      # Cursor
+      C-b: { with_mark: left }
+      C-f: { with_mark: right }
+      C-p: { with_mark: up }
+      C-n: { with_mark: down }
+      C-[: esc
+      C-a: home
+      C-e: end
+      C-m: enter
+      C-h: delete
+
