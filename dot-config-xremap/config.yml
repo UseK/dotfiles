@@ -1,9 +1,11 @@
 keymap:
   - name: Left(Rignt) super + space -> IME off(on)
     remap:
-      SUPER_R: Henkan
-      SUPER_L: Muhenkan
+      SUPER_R-space: C-space
+      SUPER_L-space: C-Shift-space
+  - name: Bugfix mozc hhkb
     remap:
+      zenkakuhankaku: backslash
   - name: Minimal Emacs keybind
     remap:
       # Cursor
@@ -11,9 +13,9 @@ keymap:
       C-f: { with_mark: right }
       C-p: { with_mark: up }
       C-n: { with_mark: down }
-      C-[: esc
+      C-leftbrace: esc
       C-a: home
       C-e: end
       C-m: enter
-      C-h: delete
+      C-h: backspace
 
