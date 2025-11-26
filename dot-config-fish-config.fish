@@ -2,7 +2,11 @@ if status is-interactive
   fish_add_path $HOME/.cargo/bin
   # Use commands installed with pip
   fish_add_path $HOME/Library/Python/3.9/bin
-  eval "$(/opt/homebrew/bin/brew shellenv)"
+  if test (uname -s) = "Darwin"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  else
+    eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+  end
   # https://developer.1password.com/docs/cli/reference/#shell-completion
   if type op &>/dev/null;
     op completion fish | source
@@ -20,7 +24,9 @@ if status is-interactive
   if type bat &>/dev/null;
     alias cat="bat -pp"
   end
-  eval (zellij setup --generate-auto-start fish | string collect)
+  if type zellij &>/dev/null;
+    eval (zellij setup --generate-auto-start fish | string collect)
+  end
 end
 
 if status --is-login
