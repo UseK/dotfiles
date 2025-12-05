@@ -9,13 +9,29 @@ keymap:
   - name: Minimal Emacs keybind
     remap:
       # Cursor
-      C-b: { with_mark: left }
-      C-f: { with_mark: right }
-      C-p: { with_mark: up }
-      C-n: { with_mark: down }
+      C-b: left
+      C-f: right
+      C-p: up
+      C-n: down
       C-leftbrace: esc
       C-a: home
       C-e: end
       C-m: enter
       C-h: backspace
-
+      C-k: [Shift-end, Delete]
+  - name: use Super as main modification kay
+    remap:
+      Super-a: C-a
+      Super-c: C-c
+      Super-e: C-e
+      Super-f: C-f
+      Super-k: C-k
+      Super-l: C-l
+      Super-n: C-n
+      Super-q: C-q
+      Super-w: C-w
+      Super-t: C-t
+  - name: move tab sith Super + Shift + \{
+    remap:
+      Super-Shift-leftbrace: C-Shift-tab
+      Super-Shift-rightbrace: C-tab
