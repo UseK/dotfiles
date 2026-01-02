@@ -1,12 +1,14 @@
 keymap:
-  - name: Left(Rignt) super + space -> IME off(on)
+  - name: Left(Right) Alt + space -> IME off(on)
     remap:
-      SUPER_R-space: C-space
-      SUPER_L-space: C-Shift-space
+      Alt_R-space: C-space
+      Alt_L-space: C-Shift-space
   - name: Bugfix mozc hhkb
     remap:
       zenkakuhankaku: backslash
   - name: Minimal Emacs keybind
+    application:
+      not: [Alacritty]
     remap:
       # Cursor
       C-b: left
@@ -20,18 +22,23 @@ keymap:
       C-h: backspace
       C-k: [Shift-end, Delete]
   - name: use Super as main modification kay
+    application:
+      not: [Alacritty]
     remap:
-      Super-a: C-a
-      Super-c: C-c
-      Super-e: C-e
-      Super-f: C-f
-      Super-k: C-k
-      Super-l: C-l
-      Super-n: C-n
-      Super-q: C-q
-      Super-w: C-w
-      Super-t: C-t
-  - name: move tab sith Super + Shift + \{
+      Alt-a: C-a
+      Alt-c: C-c
+      Alt-e: C-e
+      Alt-f: C-f
+      Alt-k: C-k
+      Alt-l: C-l
+      Alt-n: C-n
+      Alt-o: C-o
+      Alt-q: C-q
+      Alt-s: C-s
+      Alt-w: C-w
+      Alt-t: C-t
+      Alt-v: C-Shift-v
+  - name: move tab Alt + Shift + \{
     remap:
-      Super-Shift-leftbrace: C-Shift-tab
-      Super-Shift-rightbrace: C-tab
+      Alt-Shift-leftbrace: C-Shift-tab
+      Alt-Shift-rightbrace: C-tab
