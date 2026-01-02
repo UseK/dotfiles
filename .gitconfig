@@ -3,7 +3,7 @@
   email = use.k.james@gmail.com
 [core]
   # excludesfile = ~/.gitignore_global
-  # editor = vim -c \"set fenc=utf-8\"
+  editor = vim -c \"set fenc=utf-8\"
   quotepath = false
   # $ brew install git-delta
   pager = delta
