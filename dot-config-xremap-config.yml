@@ -1,8 +1,19 @@
+# modmap:
+  # - name: Left(Right) Alt tap -> IME off(on)
+  #   remap:
+  #     Alt_L:
+  #       held: Alt_L
+  #       alone: Muhenkan
+  #       free_hold: true # Optional, defaults to false.
+  #     Alt_R:
+  #       held: Alt_R
+  #       alone: Henkan
+  #       free_hold: true # Optional, defaults to false.
 keymap:
   - name: Left(Right) Alt + space -> IME off(on)
     remap:
-      Alt_R-space: C-space
-      Alt_L-space: C-Shift-space
+      Alt_R-space: Henkan
+      Alt_L-space: Muhenkan
   - name: Bugfix mozc hhkb
     remap:
       zenkakuhankaku: backslash
@@ -37,6 +48,8 @@ keymap:
       Alt-s: C-s
       Alt-w: C-w
       Alt-t: C-t
+  - name: use Super as main modification key
+    remap:
       Alt-v: C-Shift-v
   - name: move tab Alt + Shift + \{
     remap:
