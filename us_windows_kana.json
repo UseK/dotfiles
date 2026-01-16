@@ -15,6 +15,56 @@
                 }
             ],
             "from": {
+                "key_code": "1",
+                "modifiers": { "mandatory": ["right_shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "1",
+                    "modifiers": ["right_shift", "right_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": {
+                "key_code": "slash",
+                "modifiers": { "mandatory": ["left_shift"] }
+            },
+            "to": [
+                {
+                    "key_code": "slash",
+                    "modifiers": ["left_shift", "left_option"]
+                }
+            ],
+            "type": "basic"
+        },
+        {
+            "conditions": [
+                {
+                    "input_sources": [{ "language": "^ja$" }],
+                    "type": "input_source_if"
+                },
+                {
+                    "bundle_identifiers": [
+                        "^com\\.apple\\.loginwindow$"
+                    ],
+                    "type": "frontmost_application_unless"
+                }
+            ],
+            "from": {
                 "key_code": "hyphen",
                 "modifiers": { "mandatory": ["left_shift"] }
             },
