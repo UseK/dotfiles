@@ -1,14 +1,14 @@
-# modmap:
-  # - name: Left(Right) Alt tap -> IME off(on)
-  #   remap:
-  #     Alt_L:
-  #       held: Alt_L
-  #       alone: Muhenkan
-  #       free_hold: true # Optional, defaults to false.
-  #     Alt_R:
-  #       held: Alt_R
-  #       alone: Henkan
-  #       free_hold: true # Optional, defaults to false.
+modmap:
+  - name: Left(Right) Alt tap -> IME off(on)
+    remap:
+      Alt_L:
+        held: Alt_L
+        alone: Muhenkan
+        free_hold: true # Optional, defaults to false.
+      Alt_R:
+        held: Alt_R
+        alone: Henkan
+        free_hold: true # Optional, defaults to false.
 keymap:
   - name: Left(Right) Alt + space -> IME off(on)
     remap:
@@ -55,3 +55,6 @@ keymap:
     remap:
       Alt-Shift-leftbrace: C-Shift-tab
       Alt-Shift-rightbrace: C-tab
+  - name: IME off when launcher
+    remap:
+      Alt_L-semicolon: [Alt_L-semicolon, Muhenkan]
