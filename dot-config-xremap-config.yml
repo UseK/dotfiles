@@ -58,3 +58,8 @@ keymap:
   - name: IME off when launcher
     remap:
       Alt_L-semicolon: [Alt_L-semicolon, Muhenkan]
+  - name: KANA input like Windows in US keyboard
+    remap:
+      Shift-leftbrace: Shift-rightbrace
+      Shift-rightbrace: Shift-backslash
+
