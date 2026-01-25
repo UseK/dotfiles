@@ -1,0 +1,6 @@
+sudo apt -y install fcitx5 fcitx5-mozc fcitx5-configtool
+
+sudo apt install fcitx5-mozc # (1)
+sudo apt remove --purge im-config # (2)
+
+sudo apt install gnome-shell-extentions gnome-tweaks
