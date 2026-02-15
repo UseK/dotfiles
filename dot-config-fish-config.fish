@@ -6,6 +6,8 @@ if status is-interactive
     eval "$(/opt/homebrew/bin/brew shellenv)"
   else
     eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+    # To use zed as linux comman
+    fish_add_path $HOME/.local/bin
   end
   # https://developer.1password.com/docs/cli/reference/#shell-completion
   if type op &>/dev/null;
@@ -52,4 +54,3 @@ set -gx PATH "$VOLTA_HOME/bin" $PATH
 # Added by LM Studio CLI (lms)
 set -gx PATH $PATH $HOME/.lmstudio/bin
 # End of LM Studio CLI section
-
