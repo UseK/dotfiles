@@ -7,18 +7,30 @@
 // custom settings, run the `zed: Open Default Settings` command
 // from the command palette
 {
+  "buffer_font_weight": 400.0,
+  "semantic_tokens": "off",
+  "colorize_brackets": true,
+  "languages": {
+    "Rust": { "semantic_tokens": "full" },
+  },
   "ui_font_size": 14.5,
   "buffer_font_family": "Bizin Gothic NF",
-  "buffer_font_size": 14.5,
-  "buffer_line_height": "standard",
+  "buffer_font_size": 17.5,
+  "buffer_line_height": {
+    "custom": 1.0,
+  },
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Ayu Dark"
+    "dark": "Ayu Dark",
   },
   "vim_mode": true,
   "format_on_save": "on",
-  "autosave": "on_focus_change",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 500,
+    },
+  },
   "ui_font_family": "Bizin Gothic NF",
   "base_keymap": "JetBrains",
   "inlay_hints": {
@@ -26,19 +38,64 @@
     "maxLength": null,
     "lifetimeElisionHints": {
       "useParameterNames": true,
-      "enable": "skip_trivial"
+      "enable": "skip_trivial",
     },
     "closureReturnTypeHints": {
-      "enable": "always"
-    }
+      "enable": "always",
+    },
   },
   "lsp": {
     "rust-analyzer": {
       "initialization_options": {
         "rust": {
-          "analyzerTargetDir": true
-        }
-      }
-    }
-  }
+          "analyzerTargetDir": true,
+        },
+      },
+    },
+  },
+  "global_lsp_settings": {
+    "semantic_token_rules": [
+      {
+        "token_type": "variable",
+        "foreground_color": "#0078B4",
+      },
+      {
+        "token_modifiers": ["mutable"],
+        "underline": true,
+      },
+      {
+        "token_type": "parameter",
+        "font_style": "italic",
+        "foreground_color": "#9876AA",
+      },
+      {
+        "token_type": "struct",
+        "foreground_color": "#A0A050",
+        "font_weight": "bold",
+      },
+      {
+        "token_type": "keyword",
+        "foreground_color": "#CC7832",
+        "font_weight": "bold",
+      },
+      {
+        "token_type": "builtinType",
+        "foreground_color": "#CC7832",
+        "font_weight": "bold",
+      },
+      {
+        "token_type": "namespace",
+        "foreground_color": "#00CC88",
+      },
+      {
+        "token_type": "enum",
+        "foreground_color": "#DD4466",
+        "font_weight": "bold",
+      },
+      {
+        "token_type": "operator",
+        "foreground_color": "#DDCCCC",
+      },
+    ],
+  },
 }
