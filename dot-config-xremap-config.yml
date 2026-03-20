@@ -9,6 +9,9 @@ modmap:
         held: Alt_R
         alone: Henkan
         free_hold: true # Optional, defaults to false.
+  - name: Mouse ESC
+    remap:
+      BTN_BACK: ESC
 keymap:
   - name: Left(Right) Alt + space -> IME off(on)
     remap:
@@ -19,7 +22,7 @@ keymap:
       zenkakuhankaku: backslash
   - name: Minimal Emacs keybind
     application:
-      not: [Alacritty]
+      not: [Alacritty, gnome-terminal-server]
     remap:
       # Cursor
       C-b: left
@@ -34,7 +37,7 @@ keymap:
       C-k: [Shift-end, Delete]
   - name: use Super as main modification kay
     application:
-      not: [Alacritty]
+      not: [Alacritty, gnome-terminal-server, Zed, Code]
     remap:
       Alt-a: C-a
       Alt-c: C-c
@@ -58,3 +61,8 @@ keymap:
   - name: IME off when launcher
     remap:
       Alt_L-semicolon: [Alt_L-semicolon, Muhenkan]
+  - name: Browser
+    application:
+      only: [firefox_firefox]
+    remap:
+      Alt_R-r: C-r
